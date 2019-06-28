@@ -1,6 +1,7 @@
 from .models import User, Post, CommentReaction, Comment, PostReaction
 from django.utils import timezone as t
 from django.db.models import Q, F, Count
+from django.core.exceptions import SuspiciousOperation
 
 
 def get_user_data(obj):
@@ -14,11 +15,10 @@ def get_user_data(obj):
 
 def get_comment_data(comment):
     commenter = get_user_data(comment)
-    commented_at = comment.comment_create_date
-    commented_at = commented_at.strftime("%Y-%m-%d %H:%M:%S")
+    commented_at = comment.comment_create_date.strftime("%Y-%m-%d %H:%M:%S")
     reaction = CommentReaction.objects.filter(id=comment.id).values('reaction')
     reaction_count = reaction.count()
-    reactions = [like.reaction for like in reaction]
+    reactions = [like['reaction'] for like in reaction]
     comment_reactions = {"count": reaction_count, "type": reactions}
     post_comment = {"comment_id": comment.id, "commenter": commenter, "commented_at": commented_at,
                     "comment_content": comment.message, "reactions": comment_reactions,
@@ -27,8 +27,7 @@ def get_comment_data(comment):
 
 
 def get_reply_data(reply):
-    replied_at = reply.comment_create_date
-    replied_at = replied_at.strftime("%Y-%m-%d %H:%M:%S")
+    replied_at = reply.comment_create_date.strftime("%Y-%m-%d %H:%M:%S")
     reply_data = {
         "comment_id": reply.id,
         "commenter": get_user_data(reply),
@@ -41,10 +40,11 @@ def get_reply_data(reply):
 def get_post(post_id):
     post = Post.objects.get(id=post_id)
     posted_by = get_user_data(post)
-    posted_at = post.post_created_date
-    posted_at = posted_at.strftime("%Y-%m-%d %H:%M:%S")
+    posted_at = post.post_created_date.strftime("%Y-%m-%d %H:%M:%S")
     post_content = post.post_description
-    post_likes = PostReaction.objects.filter(post_id=post_id).values('reaction').distinct()
+    post_likes = PostReaction.objects.filter(post_id=post_id)
+    post_reaction_count = post_likes.count()
+    post_likes = post_likes.values('reaction').distinct()
     post_reactions = [like['reaction'] for like in post_likes]
     comments = Comment.objects.filter(post_id=post_id, commented_on_id=None)
     comments_count = comments.count()
@@ -66,7 +66,10 @@ def get_post(post_id):
         post_comments.append(post_comment)
 
     result = {"post_id": post_id, "posted_by": posted_by, "posted_at": posted_at, "post_content": post_content,
-              "reactions": post_reactions, "comments": post_comments, "comments_count": comments_count}
+              "reactions": {
+                  "count": post_reaction_count,
+                  "type": post_reactions
+              }, "comments": post_comments, "comments_count": comments_count}
     return result
 
 
@@ -123,24 +126,22 @@ def react_to_comment(user_id, comment_id, reaction_type):
 
 
 def get_user_posts(user_id):
-    posts_list = []
     posts = Post.objects.filter(user_id=user_id)
-    for post in posts:
-        posts_list.append(get_post(post.id))
-
+    posts_list = [get_post(post.id) for post in posts]
     return posts_list
 
 
 def get_posts_with_more_positive_reactions():
-    positive_posts = PostReaction.objects.values('post').annotate(positive_count=Count('reaction', filter=Q(reaction__in=("LIKE", "LOVE", "WOW", "HAHA"))), negative_count=Count('reaction', filter=Q(reaction__in=("SAD", "ANGRY")))).filter(positive_count__gt=F('negative_count')).values('post_id')
+    positive_posts = PostReaction.objects.values('post').annotate(
+        positive_count=Count('reaction', filter=Q(reaction__in=("LIKE", "LOVE", "WOW", "HAHA"))),
+        negative_count=Count('reaction', filter=Q(reaction__in=("SAD", "ANGRY")))).filter(
+        positive_count__gt=F('negative_count')).values('post_id')
     return list(positive_posts)
 
 
 def get_posts_reacted_by_user(user_id):
     likes = PostReaction.objects.filter(user_id=user_id)
-    posts_list = []
-    for like in likes:
-        posts_list.append(get_post(like.post_id.post_id))
+    posts_list = [get_post(like.post.id) for like in likes]
     return posts_list
 
 
@@ -166,13 +167,11 @@ def get_total_reaction_count():
 
 
 def get_replies_for_comment(comment_id):
+    comment = Comment.objects.get(id=comment_id)
+    if comment.commented_on_id is not None:
+        raise SuspiciousOperation("Bad Request")
     replies = Comment.objects.filter(commented_on_id=comment_id)
-    if replies.count() == 0:
-        return "Bad Request"
-    comment_replies = []
-    for reply in replies:
-        comment_reply = get_reply_data(reply)
-        comment_replies.append(comment_reply)
+    comment_replies = [get_reply_data(reply) for reply in replies]
 
     return comment_replies
 
