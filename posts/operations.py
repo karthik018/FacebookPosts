@@ -14,16 +14,17 @@ def get_user_data(obj):
 
 
 def get_comment_data(comment):
-    commenter = get_user_data(comment)
-    commented_at = comment.comment_create_date.strftime("%Y-%m-%d %H:%M:%S")
-    reaction = CommentReaction.objects.filter(id=comment.id).values('reaction')
-    reaction_count = reaction.count()
-    reactions = [like['reaction'] for like in reaction]
-    comment_reactions = {"count": reaction_count, "type": reactions}
-    post_comment = {"comment_id": comment.id, "commenter": commenter, "commented_at": commented_at,
-                    "comment_content": comment.message, "reactions": comment_reactions,
-                    }
-    return post_comment
+    data = {
+        "comment_id":comment['id'],
+        "commenter":{
+            "user_id":comment['user_id'],
+            "name": comment['user__user_name'],
+            "profile_pic": comment['user__profile_pic']
+        },
+        "commented_at": comment['comment_create_date'].strftime("%Y-%m-%d %H:%M:%S"),
+        "comment_content": comment['message']
+    }
+    return data
 
 
 def get_reply_data(reply):
@@ -38,38 +39,80 @@ def get_reply_data(reply):
 
 
 def get_post(post_id):
-    post = Post.objects.get(id=post_id)
+    post = Post.objects.select_related('user').get(id=post_id)
     posted_by = get_user_data(post)
     posted_at = post.post_created_date.strftime("%Y-%m-%d %H:%M:%S")
     post_content = post.post_description
-    post_likes = PostReaction.objects.filter(post_id=post_id)
-    post_reaction_count = post_likes.count()
-    post_likes = post_likes.values('reaction').distinct()
-    post_reactions = [like['reaction'] for like in post_likes]
-    comments = Comment.objects.filter(post_id=post_id, commented_on_id=None)
-    comments_count = comments.count()
-    post_comments = []
-    for comment in comments:
-        post_replies = []
-        replies = Comment.objects.filter(post_id=post_id, commented_on_id=comment.id)
-        replies_count = replies.count()
-        for reply in replies:
-            reply_reaction = CommentReaction.objects.filter(comment_id=reply.id).values('reaction')
-            reply_react_count = reply_reaction.count()
-            reply_react_type = [like.reaction for like in reply_reaction]
-            replier = get_reply_data(reply)
-            replier["reactions"] = {"count": reply_react_count, "type": reply_react_type}
-            post_replies.append(replier)
-        post_comment = get_comment_data(comment)
-        post_comment["replies_count"] = replies_count
-        post_comment["replies"] = post_replies
-        post_comments.append(post_comment)
+    post_reactions = PostReaction.objects.filter(post_id=1).values('reaction')
+    reactions = []
+    for reaction in post_reactions:
+        reactions.append(reaction['reaction'])
+    post_reaction_count = len(reactions)
+    post_reactions = list(set(reactions))
+
+    post_comments = Comment.objects.select_related('user').filter(post_id=post_id, commented_on_id=None).values('id',
+                                                                                                          'user_id',
+                                                                                                          'user__user_name',
+                                                                                                          'user__profile_pic',
+                                                                                                          'commented_on_id',
+                                                                                                          'comment_create_date',
+                                                                                                          'message')
+    comments_ids = [comment['id'] for comment in post_comments]
+
+    replies = Comment.objects.select_related('user').filter(commented_on_id__in=comments_ids).values('id', 'user_id',
+                                                                                                     'user__user_name',
+                                                                                                     'user__profile_pic',
+                                                                                                     'commented_on_id',
+                                                                                                     'comment_create_date',
+                                                                                                     'message')
+    comments_ids[len(comments_ids)+1:] = [reply['id'] for reply in replies]
+
+    comment_reactions = CommentReaction.objects.select_related('user').filter(comment_id__in=comments_ids).values('comment_id', 'reaction')
+
+    comment_reaction = {}
+    for react in comment_reactions:
+        l = []
+        r = react['reaction']
+        l.append(r)
+        try:
+            comment_reaction[react['comment_id']].append(r)
+
+        except:
+            comment_reaction[react['comment_id']] = l
+
+    for id in comment_reaction:
+        count = len(comment_reaction[id])
+        reactions = list(set(comment_reaction[id]))
+        data = {"count": count, "type": reactions}
+        comment_reaction[id] = data
+
+    comment_replies = {}
+    for reply in replies:
+        comment_reply = []
+        d = get_comment_data(reply)
+        try:
+            d["reactions"] = comment_reaction[reply['id']]
+        except:
+            d["reactions"] = {"count": 0, "type": []}
+        comment_reply.append(d)
+        try:
+            comment_replies[reply['commented_on_id']].append(d)
+        except:
+            comment_replies[reply['commented_on_id']] = comment_reply
+
+    comments = []
+    for comment in post_comments:
+        d = get_comment_data(comment)
+        d["reactions"] = comment_reaction[comment['id']]
+        d["replies_count"] = len(comment_replies[comment['id']])
+        d["replies"] = comment_replies[comment['id']]
+        comments.append(d)
 
     result = {"post_id": post_id, "posted_by": posted_by, "posted_at": posted_at, "post_content": post_content,
               "reactions": {
                   "count": post_reaction_count,
                   "type": post_reactions
-              }, "comments": post_comments, "comments_count": comments_count}
+              }, "comments": comments, "comments_count": len(comments)}
     return result
 
 
@@ -126,7 +169,7 @@ def react_to_comment(user_id, comment_id, reaction_type):
 
 
 def get_user_posts(user_id):
-    posts = Post.objects.filter(user_id=user_id)
+    posts = Post.objects.prefetch_related('comment_set', 'postreaction_set').filter(user_id=user_id)
     posts_list = [get_post(post.id) for post in posts]
     return posts_list
 
@@ -140,13 +183,13 @@ def get_posts_with_more_positive_reactions():
 
 
 def get_posts_reacted_by_user(user_id):
-    likes = PostReaction.objects.filter(user_id=user_id)
+    likes = PostReaction.objects.prefetch_related('post_set').filter(user_id=user_id)
     posts_list = [get_post(like.post.id) for like in likes]
     return posts_list
 
 
 def get_reactions_to_post(post_id):
-    likes = PostReaction.objects.filter(post_id=post_id)
+    likes = PostReaction.objects.select_related('user').filter(post_id=post_id)
     reactions = []
     for like in likes:
         post_reactions = get_user_data(like)
@@ -162,20 +205,19 @@ def get_reaction_metrics(post_id):
 
 
 def get_total_reaction_count():
-    reaction_count = PostReaction.objects.all()
-    return reaction_count.count()
+    reaction_count = PostReaction.objects.all().count()
+    return reaction_count
 
 
 def get_replies_for_comment(comment_id):
     comment = Comment.objects.get(id=comment_id)
     if comment.commented_on_id is not None:
         raise SuspiciousOperation("Bad Request")
-    replies = Comment.objects.filter(commented_on_id=comment_id)
+    replies = Comment.objects.select_related('user').filter(commented_on_id=comment_id)
     comment_replies = [get_reply_data(reply) for reply in replies]
 
     return comment_replies
 
 
 def delete_post(post_id):
-    post = Post.objects.get(id=post_id)
-    post.delete()
+    Post.objects.get(id=post_id).delete()
