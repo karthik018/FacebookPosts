@@ -14,7 +14,7 @@ class Actor(models.Model):
 class Movie(models.Model):
     title = models.CharField(max_length=50)
     release_date = models.DateField()
-    actors = models.ManyToManyField('MovieCast', related_name='movies')
+    actors = models.ManyToManyField('Actor', through='MovieCast')
 
     def __str__(self):
         return self.title
@@ -31,10 +31,10 @@ class MovieCast(models.Model):
 
 class MovieRating(models.Model):
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
-    avg_rating = models.FloatField(
-        validators=[MinValueValidator(0.0), MaxValueValidator(10.0)]
+    rating_number = models.IntegerField(
+        validators=[MinValueValidator(0), MaxValueValidator(5)]
     )
     no_of_ratings = models.IntegerField()
 
     def __str__(self):
-        return self.avg_rating
+        return str(self.movie.title)
