@@ -2,13 +2,59 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5c28d12-559b-4d1a-bd39-7522b6b1fb50" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/IMDB/operations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quickstart/permissions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quickstart/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quickstart/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/ib_admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/ib_admin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Untitled-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Untitled-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMDB/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMDB/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/IMDB/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/core/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/core/application.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/core/history.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/core/history.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/core/magics/script.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/core/magics/script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/terminal/pt_inputhooks/qt.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/terminal/pt_inputhooks/qt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/utils/coloransi.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/utils/coloransi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/utils/sysinfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/utils/sysinfo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/backcall/_signatures.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/backcall/_signatures.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/django/contrib/sessions/backends/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/django/contrib/sessions/backends/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/django/db/backends/mysql/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/django/db/backends/mysql/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jinja2/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jinja2/environment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jsonschema/tests/_suite.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jsonschema/tests/_suite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jsonschema/tests/test_validators.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jsonschema/tests/test_validators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/adapter.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/adapter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/localinterfaces.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/localinterfaces.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_core/command.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_core/command.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_core/migrate.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_core/migrate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_core/paths.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_core/paths.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_core/troubleshoot.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_core/troubleshoot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_core/utils/shutil_which.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_core/utils/shutil_which.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/exporters/html.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/exporters/html.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/exporters/latex.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/exporters/latex.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/exporters/pdf.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/exporters/pdf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/exporters/script.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/exporters/script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/exporters/slides.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/exporters/slides.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/exporters/templateexporter.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/exporters/templateexporter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/preprocessors/execute.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/preprocessors/execute.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/preprocessors/tagremove.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/preprocessors/tagremove.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/bundler/bundlerextensions.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/bundler/bundlerextensions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/bundler/handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/bundler/handlers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/bundler/tests/test_bundlerextension.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/bundler/tests/test_bundlerextension.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/nbconvert/handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/nbconvert/handlers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/notebookapp.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/notebookapp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/services/contents/handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/services/contents/handlers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/services/kernels/kernelmanager.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/services/kernels/kernelmanager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/terminal/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/terminal/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pip/_vendor/distlib/_backport/sysconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pip/_vendor/distlib/_backport/sysconfig.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pkg_resources/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pkg_resources/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/ptyprocess/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/ptyprocess/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pytz/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pytz/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/six.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/six.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/testpath/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/testpath/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/wheel/bdist_wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/wheel/bdist_wheel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/wheel/wheelfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/wheel/wheelfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FacebookPosts/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/FacebookPosts/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FacebookPosts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FacebookPosts/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Untitled.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Untitled.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/posts/operations.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,102 +63,107 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.66626793">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/IMDB/models.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
-                  <folding>
-                    <element signature="e#0#28#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/posts/operations.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1477">
-                  <caret line="60" selection-start-line="60" selection-end-line="60" />
-                  <folding>
-                    <element signature="e#0#70#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/IMDB/operations.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="474">
-                  <caret line="176" selection-start-line="176" selection-end-line="176" />
-                  <folding>
-                    <element signature="e#0#21#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/FacebookPosts/settings.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="495">
-                  <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/IMDB/admin.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="23" selection-start-column="23" selection-end-column="23" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/posts/admin.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <folding>
-                    <element signature="e#0#32#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/posts/models.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="45">
-                  <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-                  <folding>
-                    <element signature="e#0#28#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/../Desktop/learning/practice_problems/Django/django_db_practice_lvl_2.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="480">
-                  <caret line="32" column="22" lean-forward="true" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quickstart/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="82" selection-start-line="21" selection-start-column="82" selection-end-line="21" selection-end-column="82" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quickstart/permissions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quickstart/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FacebookPosts/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quickstart/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FacebookPosts/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="42" column="10" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/posts/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quickstart/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quickstart/serializers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -135,12 +186,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/posts/operations.py" />
-        <option value="$PROJECT_DIR$/FacebookPosts/settings.py" />
         <option value="$PROJECT_DIR$/IMDB/admin.py" />
         <option value="$PROJECT_DIR$/../Desktop/learning/practice_problems/Django/django_db_practice_lvl_2.txt" />
-        <option value="$PROJECT_DIR$/IMDB/models.py" />
         <option value="$PROJECT_DIR$/IMDB/operations.py" />
+        <option value="$PROJECT_DIR$/posts/operations.py" />
+        <option value="$PROJECT_DIR$/IMDB/models.py" />
+        <option value="$PROJECT_DIR$/FacebookPosts/settings.py" />
+        <option value="$PROJECT_DIR$/quickstart/models.py" />
+        <option value="$PROJECT_DIR$/quickstart/urls.py" />
+        <option value="$PROJECT_DIR$/quickstart/serializers.py" />
+        <option value="$PROJECT_DIR$/quickstart/admin.py" />
+        <option value="$PROJECT_DIR$/FacebookPosts/urls.py" />
+        <option value="$PROJECT_DIR$/quickstart/permissions.py" />
+        <option value="$PROJECT_DIR$/quickstart/views.py" />
+        <option value="$PROJECT_DIR$/posts/models.py" />
       </list>
     </option>
   </component>
@@ -154,7 +213,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -183,10 +241,16 @@
               <item name="FacebookPosts" type="462c0819:PsiDirectoryNode" />
               <item name="posts" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="FacebookPosts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FacebookPosts" type="462c0819:PsiDirectoryNode" />
+              <item name="quickstart" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -233,10 +297,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.33585313" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32937366" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49973643" visible="true" weight="0.33585313" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32937366" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -253,10 +317,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FacebookPosts/settings.py">
+    <entry file="file://$PROJECT_DIR$/IMDB/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+        <state relative-caret-position="315">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts/operations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="54" column="113" selection-start-line="54" selection-start-column="113" selection-end-line="54" selection-end-column="113" />
+          <folding>
+            <element signature="e#0#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IMDB/operations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="148" column="36" selection-start-line="148" selection-start-column="36" selection-end-line="148" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -264,6 +351,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quickstart/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Desktop/learning/practice_problems/Django/django_db_practice_lvl_2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -276,49 +373,83 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/FacebookPosts/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="42" column="10" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quickstart/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quickstart/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FacebookPosts/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quickstart/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quickstart/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="82" selection-start-line="21" selection-start-column="82" selection-end-line="21" selection-end-column="82" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quickstart/permissions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quickstart/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/posts/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        <state relative-caret-position="435">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IMDB/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/posts/operations.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1477">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="e#0#70#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Desktop/learning/practice_problems/Django/django_db_practice_lvl_2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="22" lean-forward="true" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IMDB/operations.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="176" selection-start-line="176" selection-end-line="176" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
