@@ -15,9 +15,9 @@ def get_user_data(obj):
 
 def get_comment_data(comment):
     data = {
-        "comment_id":comment['id'],
-        "commenter":{
-            "user_id":comment['user_id'],
+        "comment_id": comment['id'],
+        "commenter": {
+            "user_id": comment['user_id'],
             "name": comment['user__user_name'],
             "profile_pic": comment['user__profile_pic']
         },
@@ -43,31 +43,30 @@ def get_post(post_id):
     posted_by = get_user_data(post)
     posted_at = post.post_created_date.strftime("%Y-%m-%d %H:%M:%S")
     post_content = post.post_description
-    post_reactions = PostReaction.objects.filter(post_id=1).values('reaction')
+    post_reactions = PostReaction.objects.filter(post_id=post_id).values('reaction')
     reactions = []
     for reaction in post_reactions:
         reactions.append(reaction['reaction'])
     post_reaction_count = len(reactions)
     post_reactions = list(set(reactions))
 
-    post_comments = Comment.objects.select_related('user').filter(post_id=post_id, commented_on_id=None).values('id',
-                                                                                                          'user_id',
-                                                                                                          'user__user_name',
-                                                                                                          'user__profile_pic',
-                                                                                                          'commented_on_id',
-                                                                                                          'comment_create_date',
-                                                                                                          'message')
+    post_comments = Comment.objects.filter(post_id=post_id, commented_on_id=None).values('id', 'user_id',
+                                                                                         'user__user_name',
+                                                                                         'user__profile_pic',
+                                                                                         'commented_on_id',
+                                                                                         'comment_create_date',
+                                                                                         'message')
     comments_ids = [comment['id'] for comment in post_comments]
 
-    replies = Comment.objects.select_related('user').filter(commented_on_id__in=comments_ids).values('id', 'user_id',
-                                                                                                     'user__user_name',
-                                                                                                     'user__profile_pic',
-                                                                                                     'commented_on_id',
-                                                                                                     'comment_create_date',
-                                                                                                     'message')
-    comments_ids[len(comments_ids)+1:] = [reply['id'] for reply in replies]
+    replies = Comment.objects.filter(commented_on_id__in=comments_ids).values('id', 'user_id',
+                                                                              'user__user_name',
+                                                                              'user__profile_pic',
+                                                                              'commented_on_id',
+                                                                              'comment_create_date',
+                                                                              'message')
+    comments_ids[len(comments_ids) + 1:] = [reply['id'] for reply in replies]
 
-    comment_reactions = CommentReaction.objects.select_related('user').filter(comment_id__in=comments_ids).values('comment_id', 'reaction')
+    comment_reactions = CommentReaction.objects.filter(comment_id__in=comments_ids).values('comment_id', 'reaction')
 
     comment_reaction = {}
     for react in comment_reactions:
