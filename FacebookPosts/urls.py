@@ -22,7 +22,7 @@ from django.contrib import admin
 # router.register(r'groups', views.GroupViewSet)
 
 urlpatterns = [
-    path('', include('quickstart.urls')),
+    path('', include('posts.urls')),
     path('admin/', admin.site.urls)
 ]
 

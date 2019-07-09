@@ -1,13 +1,13 @@
 from django.db import models
 from posts.reactions import Reaction
+from django.contrib.auth.models import AbstractUser
 
 
-class User(models.Model):
-    user_name = models.CharField(max_length=15)
-    profile_pic = models.CharField(max_length=100, default=None)
+class User(AbstractUser):
+    profile_pic = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.user_name
+        return self.username
 
 
 class Post(models.Model):
