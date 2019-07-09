@@ -40,7 +40,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/ib_admin/FacebookPosts/.venv"
+VIRTUAL_ENV="/home/ib_admin/Documents/FacebookPosts/.venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

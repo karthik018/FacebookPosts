@@ -1,4 +1,4 @@
-#!/home/ib_admin/FacebookPosts/.venv/bin/python
+#!/home/ib_admin/Documents/FacebookPosts/.venv/bin/python
 
 import sys
 import getopt

@@ -2,19 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5c28d12-559b-4d1a-bd39-7522b6b1fb50" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/FacebookPosts.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FacebookPosts.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FacebookPosts/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/FacebookPosts/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FacebookPosts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FacebookPosts/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/posts/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/posts/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/migrations/0002_auto_20190627_1238.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/posts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quickstart/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quickstart/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quickstart/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/quickstart/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/activate" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/activate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/activate.csh" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/activate.csh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/activate.fish" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/activate.fish" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/easy_install" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/easy_install" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/easy_install-3.7" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/easy_install-3.7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/pip" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/pip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/pip3" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/pip3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/pip3.7" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/pip3.7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/python-config" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/python-config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/wheel" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/wheel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/core/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/core/application.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/django/contrib/sessions/backends/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/django/contrib/sessions/backends/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pip-19.1.1.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pip-19.1.1.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pip/_vendor/distlib/_backport/sysconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pip/_vendor/distlib/_backport/sysconfig.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pkg_resources-0.0.0.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pkg_resources-0.0.0.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pkg_resources/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pkg_resources/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pytz/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pytz/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/setuptools-41.0.1.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/setuptools-41.0.1.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/wheel-0.33.4.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/wheel-0.33.4.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/wheel/bdist_wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/wheel/bdist_wheel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/wheel/wheelfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/wheel/wheelfile.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,31 +34,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quickstart/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/posts/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="175" column="73" lean-forward="true" selection-start-line="175" selection-start-column="73" selection-end-line="175" selection-end-column="73" />
+            <state relative-caret-position="579">
+              <caret line="178" column="31" selection-start-line="178" selection-start-column="31" selection-end-line="178" selection-end-column="31" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/posts/permissions.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -81,10 +72,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/posts/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
+            <state relative-caret-position="699">
               <caret line="56" column="92" selection-start-line="56" selection-start-column="92" selection-end-line="56" selection-end-column="92" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.venv/lib/python3.7/site-packages/django/contrib/sessions/backends/db.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="102" column="31" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,21 +97,9 @@
         <entry file="file://$PROJECT_DIR$/posts/operations.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="136" column="57" selection-start-line="136" selection-start-column="57" selection-end-line="136" selection-end-column="57" />
+              <caret line="134" column="57" selection-start-line="134" selection-start-column="57" selection-end-line="134" selection-end-column="57" />
               <folding>
                 <element signature="e#0#70#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quickstart/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -157,6 +148,10 @@
         <option value="$PROJECT_DIR$/posts/serializers.py" />
         <option value="$PROJECT_DIR$/posts/urls.py" />
         <option value="$PROJECT_DIR$/posts/views.py" />
+        <option value="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pytz/__init__.py" />
+        <option value="$PROJECT_DIR$/manage.py" />
+        <option value="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/core/application.py" />
+        <option value="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/django/contrib/sessions/backends/db.py" />
       </list>
     </option>
   </component>
@@ -420,19 +415,9 @@
     <entry file="file://$PROJECT_DIR$/posts/operations.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
-          <caret line="136" column="57" selection-start-line="136" selection-start-column="57" selection-end-line="136" selection-end-column="57" />
+          <caret line="134" column="57" selection-start-line="134" selection-start-column="57" selection-end-line="134" selection-end-column="57" />
           <folding>
             <element signature="e#0#70#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/posts/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="56" column="92" selection-start-line="56" selection-start-column="92" selection-end-line="56" selection-end-column="92" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -447,15 +432,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.venv/lib/python3.7/importlib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="126" column="11" lean-forward="true" selection-start-line="126" selection-start-column="11" selection-end-line="126" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.venv/lib/python3.7/site-packages/django/core/management/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.venv/lib/python3.7/site-packages/django/core/management/commands/runserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="42" lean-forward="true" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pytz/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#237#247#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pkg_resources/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="2323" selection-start-line="2323" selection-end-line="2323" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/core/application.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-195">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#429#442#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#84#93#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/posts/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="175" column="73" lean-forward="true" selection-start-line="175" selection-start-column="73" selection-end-line="175" selection-end-column="73" />
+        <state relative-caret-position="579">
+          <caret line="178" column="31" selection-start-line="178" selection-start-column="31" selection-end-line="178" selection-end-column="31" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="699">
+          <caret line="56" column="92" selection-start-line="56" selection-start-column="92" selection-end-line="56" selection-end-column="92" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.venv/lib/python3.7/site-packages/django/contrib/sessions/backends/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="102" column="31" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
