@@ -2,28 +2,128 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5c28d12-559b-4d1a-bd39-7522b6b1fb50" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/bin/activate" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/activate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/bin/activate.csh" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/activate.csh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/bin/activate.fish" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/activate.fish" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IMDB/tests_check.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts/tests_posts.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sample_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests_smtp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FacebookPosts.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FacebookPosts.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.venv/bin/easy_install" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/easy_install" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.venv/bin/easy_install-3.7" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/easy_install-3.7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/bin/pip" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/pip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/bin/pip3" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/pip3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/bin/pip3.7" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/pip3.7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/bin/python-config" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/python-config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/bin/wheel" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/wheel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/iptest" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/iptest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/iptest3" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/iptest3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/ipython" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/ipython" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/ipython3" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/ipython3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/jsonschema" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/jsonschema" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/jupyter" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/jupyter" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/jupyter-bundlerextension" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/jupyter-bundlerextension" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/jupyter-console" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/jupyter-console" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/jupyter-kernel" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/jupyter-kernel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/jupyter-kernelspec" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/jupyter-kernelspec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/jupyter-migrate" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/jupyter-migrate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/jupyter-nbconvert" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/jupyter-nbconvert" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/jupyter-nbextension" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/jupyter-nbextension" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/jupyter-notebook" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/jupyter-notebook" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/jupyter-qtconsole" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/jupyter-qtconsole" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/jupyter-run" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/jupyter-run" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/jupyter-serverextension" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/jupyter-serverextension" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/jupyter-troubleshoot" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/jupyter-troubleshoot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/jupyter-trust" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/jupyter-trust" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/bin/pygmentize" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/bin/pygmentize" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/core/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/core/application.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/django/contrib/sessions/backends/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/django/contrib/sessions/backends/db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pip-19.1.1.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pip-19.1.1.dist-info/RECORD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pip/_vendor/distlib/_backport/sysconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pip/_vendor/distlib/_backport/sysconfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pkg_resources-0.0.0.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pkg_resources-0.0.0.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/core/history.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/core/history.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/core/magics/execution.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/core/magics/execution.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/core/magics/script.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/core/magics/script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/core/release.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/core/release.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/core/tests/test_magic.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/core/tests/test_magic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/terminal/pt_inputhooks/qt.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/terminal/pt_inputhooks/qt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/utils/_sysinfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/utils/_sysinfo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/utils/coloransi.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/utils/coloransi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/utils/sysinfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/utils/sysinfo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/Pygments-2.4.2.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/Pygments-2.4.2.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/_pyrsistent_version.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/_pyrsistent_version.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/backcall/_signatures.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/backcall/_signatures.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/ipython-7.6.1.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/ipython-7.6.1.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jinja2/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jinja2/environment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jsonschema-3.0.1.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jsonschema-3.0.1.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jsonschema/tests/_suite.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jsonschema/tests/_suite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jsonschema/tests/test_validators.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jsonschema/tests/test_validators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client-5.3.0.dist-info/COPYING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client-5.3.0.dist-info/INSTALLER" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client-5.3.0.dist-info/METADATA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client-5.3.0.dist-info/RECORD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client-5.3.0.dist-info/WHEEL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client-5.3.0.dist-info/entry_points.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client-5.3.0.dist-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/_version.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/_version.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/adapter.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/adapter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/channels.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/channels.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/ioloop/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/ioloop/manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/localinterfaces.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/localinterfaces.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/multikernelmanager.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/multikernelmanager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/session.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/session.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/tests/test_kernelmanager.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/tests/test_kernelmanager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/tests/test_multikernelmanager.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/tests/test_multikernelmanager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/tests/test_session.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_client/tests/test_session.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_console-6.0.0.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_console-6.0.0.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_core-4.5.0.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_core-4.5.0.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_core/command.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_core/command.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_core/migrate.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_core/migrate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_core/paths.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_core/paths.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_core/troubleshoot.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_core/troubleshoot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_core/utils/shutil_which.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/jupyter_core/utils/shutil_which.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert-5.5.0.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert-5.5.0.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/exporters/html.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/exporters/html.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/exporters/latex.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/exporters/latex.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/exporters/pdf.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/exporters/pdf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/exporters/script.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/exporters/script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/exporters/slides.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/exporters/slides.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/exporters/templateexporter.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/exporters/templateexporter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/preprocessors/execute.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/preprocessors/execute.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/preprocessors/tagremove.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbconvert/preprocessors/tagremove.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbformat-4.4.0.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/nbformat-4.4.0.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook-5.7.8.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook-5.7.8.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/bundler/bundlerextensions.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/bundler/bundlerextensions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/bundler/handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/bundler/handlers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/bundler/tests/test_bundlerextension.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/bundler/tests/test_bundlerextension.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/nbconvert/handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/nbconvert/handlers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/notebookapp.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/notebookapp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/services/contents/handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/services/contents/handlers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/services/kernels/kernelmanager.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/services/kernels/kernelmanager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/terminal/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/notebook/terminal/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pkg_resources/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pkg_resources/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pytz/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pytz/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pkg_resources/_vendor/appdirs.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pkg_resources/_vendor/appdirs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pkg_resources/extern/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pkg_resources/extern/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pkg_resources/py31compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pkg_resources/py31compat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/ptyprocess/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/ptyprocess/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pvectorc.cpython-37m-x86_64-linux-gnu.so" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pvectorc.cpython-37m-x86_64-linux-gnu.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pyrsistent-0.15.3-py3.7.egg-info/PKG-INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pyrsistent-0.15.3-py3.7.egg-info/SOURCES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pyrsistent-0.15.3-py3.7.egg-info/dependency_links.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pyrsistent-0.15.3-py3.7.egg-info/installed-files.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pyrsistent-0.15.3-py3.7.egg-info/requires.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pyrsistent-0.15.3-py3.7.egg-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pyrsistent/_checked_types.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pyrsistent/_checked_types.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pyrsistent/_pvector.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pyrsistent/_pvector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pyrsistent/typing.pyi" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pyrsistent/typing.pyi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/qtconsole-4.5.1.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/qtconsole-4.5.1.dist-info/RECORD" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/setuptools-41.0.1.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/setuptools-41.0.1.dist-info/RECORD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/wheel-0.33.4.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/wheel-0.33.4.dist-info/RECORD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/wheel/bdist_wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/wheel/bdist_wheel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/wheel/wheelfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/wheel/wheelfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/six.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/six.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/testpath/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/testpath/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/tornado-6.0.3.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/tornado-6.0.3.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/tornado/speedups.cpython-37m-x86_64-linux-gnu.so" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/tornado/speedups.cpython-37m-x86_64-linux-gnu.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/share/man/man1/ipython.1.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/share/man/man1/ipython.1.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FacebookPosts/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/FacebookPosts/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/posts/operations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/posts/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/posts/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,25 +134,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/posts/views.py">
+        <entry file="file://$PROJECT_DIR$/pytest.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="579">
-              <caret line="178" column="31" selection-start-line="178" selection-start-column="31" selection-end-line="178" selection-end-column="31" />
+            <state relative-caret-position="15">
+              <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/posts/tests_posts.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="541">
+              <caret line="478" column="83" selection-start-line="478" selection-start-column="83" selection-end-line="478" selection-end-column="83" />
               <folding>
-                <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#0#25#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/posts/urls.py">
+        <entry file="file://$PROJECT_DIR$/posts/conftest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="135">
+              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -60,8 +166,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/posts/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+            <state relative-caret-position="75">
+              <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -72,7 +178,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/posts/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="699">
+            <state relative-caret-position="825">
               <caret line="56" column="92" selection-start-line="56" selection-start-column="92" selection-end-line="56" selection-end-column="92" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
@@ -81,23 +187,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.venv/lib/python3.7/site-packages/django/contrib/sessions/backends/db.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="102" column="31" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/posts/operations.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="134" column="57" selection-start-line="134" selection-start-column="57" selection-end-line="134" selection-end-column="57" />
+            <state relative-caret-position="174">
+              <caret line="43" column="68" lean-forward="true" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="68" />
               <folding>
                 <element signature="e#0#70#0" expanded="true" />
               </folding>
@@ -110,6 +204,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Python Unit Test" />
         <option value="Python Script" />
       </list>
     </option>
@@ -139,23 +234,35 @@
         <option value="$PROJECT_DIR$/quickstart/permissions.py" />
         <option value="$PROJECT_DIR$/quickstart/views.py" />
         <option value="$PROJECT_DIR$/FacebookPosts/urls.py" />
-        <option value="$PROJECT_DIR$/FacebookPosts/settings.py" />
         <option value="$PROJECT_DIR$/quickstart/models.py" />
         <option value="$PROJECT_DIR$/posts/admin.py" />
-        <option value="$PROJECT_DIR$/posts/models.py" />
         <option value="$PROJECT_DIR$/posts/permissions.py" />
-        <option value="$PROJECT_DIR$/posts/operations.py" />
         <option value="$PROJECT_DIR$/posts/serializers.py" />
-        <option value="$PROJECT_DIR$/posts/urls.py" />
-        <option value="$PROJECT_DIR$/posts/views.py" />
         <option value="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/pytz/__init__.py" />
         <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/IPython/core/application.py" />
         <option value="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/django/contrib/sessions/backends/db.py" />
+        <option value="$PROJECT_DIR$/posts/urls.py" />
+        <option value="$PROJECT_DIR$/posts/views.py" />
+        <option value="$PROJECT_DIR$/pytest.ini.py" />
+        <option value="$PROJECT_DIR$/IMDB/tests_check.py" />
+        <option value="$PROJECT_DIR$/FacebookPosts/tests.py" />
+        <option value="$PROJECT_DIR$/FacebookPosts/settings.py" />
+        <option value="$PROJECT_DIR$/.venv/lib/python3.7/site-packages/six.py" />
+        <option value="$PROJECT_DIR$/pytest.ini" />
+        <option value="$PROJECT_DIR$/posts/sample_tests.py" />
+        <option value="$PROJECT_DIR$/conftest.py" />
+        <option value="$PROJECT_DIR$/tests_smtp.py" />
+        <option value="$PROJECT_DIR$/sample_tests.py" />
+        <option value="$PROJECT_DIR$/posts/models.py" />
+        <option value="$PROJECT_DIR$/posts/conftest.py" />
+        <option value="$PROJECT_DIR$/posts/operations.py" />
+        <option value="$PROJECT_DIR$/posts/tests_posts.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="960" />
     <option name="y" value="25" />
     <option name="width" value="960" />
     <option name="height" value="1055" />
@@ -191,8 +298,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Desktop/learning/practice_problems/Django/django_db_practice_lvl_2.txt" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/Fractions" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/FacebookPosts" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -223,48 +336,26 @@
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.118608326" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11439114" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32852387" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32814237" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32937366" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49973643" visible="true" weight="0.2663707" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32937366" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32937366" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49973643" visible="true" weight="0.32721382" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.118608326" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32937366" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49973643" visible="true" weight="0.336293" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32937366" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/posts/reactions.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/IMDB/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -354,13 +445,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FacebookPosts/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/quickstart/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -391,43 +475,6 @@
           <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/posts/permissions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/posts/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/posts/operations.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="134" column="57" selection-start-line="134" selection-start-column="57" selection-end-line="134" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#70#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/posts/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -490,19 +537,140 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.venv/lib/python3.7/site-packages/django/contrib/sessions/backends/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="92" column="31" lean-forward="true" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.venv/lib/python3.7/site-packages/oauth2_provider/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="45" lean-forward="true" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.venv/lib/python3.7/site-packages/oauth2_provider/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/440551756/builtins.py" />
+    <entry file="file://$PROJECT_DIR$/.venv/lib/python3.7/site-packages/rest_framework/permissions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.venv/lib/python3.7/site-packages/oauth2_provider/contrib/rest_framework/authentication.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-135">
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.venv/lib/python3.7/site-packages/oauth2_provider/contrib/rest_framework/permissions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="84" column="65" selection-start-line="84" selection-start-column="65" selection-end-line="84" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytest.ini.py" />
     <entry file="file://$PROJECT_DIR$/posts/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="178" column="31" selection-start-line="178" selection-start-column="31" selection-end-line="178" selection-end-column="31" />
+        <state relative-caret-position="2685">
+          <caret line="189" selection-start-line="189" selection-end-line="189" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/posts/permissions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.venv/lib/python3.7/site-packages/py/_vendored_packages/iniconfig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FacebookPosts/tests.py" />
+    <entry file="file://$PROJECT_DIR$/.venv/lib/python3.7/site-packages/six.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="842" column="35" lean-forward="true" selection-start-line="842" selection-start-column="35" selection-end-line="842" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IMDB/tests_check.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FacebookPosts/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conftest.py" />
+    <entry file="file://$PROJECT_DIR$/tests_smtp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.pytest_cache/v/cache/lastfailed">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.pytest_cache/v/cache/nodeids">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.pytest_cache/v/cache/stepwise">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pytest.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/posts/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="699">
+        <state relative-caret-position="825">
           <caret line="56" column="92" selection-start-line="56" selection-start-column="92" selection-end-line="56" selection-end-column="92" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
@@ -510,12 +678,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.venv/lib/python3.7/site-packages/django/contrib/sessions/backends/db.py">
+    <entry file="file://$PROJECT_DIR$/sample_tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="102" column="31" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts/conftest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts/operations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="43" column="68" lean-forward="true" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="68" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts/tests_posts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="478" column="83" selection-start-line="478" selection-start-column="83" selection-end-line="478" selection-end-column="83" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>

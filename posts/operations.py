@@ -7,7 +7,7 @@ from django.core.exceptions import SuspiciousOperation
 def get_user_data(obj):
     user = {
         "user_id": obj.user_id,
-        "name": obj.user.user_name,
+        "name": obj.user.username,
         "profile_pic_url": obj.user.profile_pic
     }
     return user
@@ -18,7 +18,7 @@ def get_comment_data(comment):
         "comment_id": comment['id'],
         "commenter": {
             "user_id": comment['user_id'],
-            "name": comment['user__user_name'],
+            "name": comment['user__username'],
             "profile_pic": comment['user__profile_pic']
         },
         "commented_at": comment['comment_create_date'].strftime("%Y-%m-%d %H:%M:%S"),
@@ -51,7 +51,7 @@ def get_post(post_id):
     post_reactions = list(set(reactions))
 
     post_comments = Comment.objects.filter(post_id=post_id, commented_on_id=None).values('id', 'user_id',
-                                                                                         'user__user_name',
+                                                                                         'user__username',
                                                                                          'user__profile_pic',
                                                                                          'commented_on_id',
                                                                                          'comment_create_date',
@@ -59,7 +59,7 @@ def get_post(post_id):
     comments_ids = [comment['id'] for comment in post_comments]
 
     replies = Comment.objects.filter(commented_on_id__in=comments_ids).values('id', 'user_id',
-                                                                              'user__user_name',
+                                                                              'user__username',
                                                                               'user__profile_pic',
                                                                               'commented_on_id',
                                                                               'comment_create_date',
@@ -102,9 +102,14 @@ def get_post(post_id):
     comments = []
     for comment in post_comments:
         d = get_comment_data(comment)
-        d["reactions"] = comment_reaction[comment['id']]
-        d["replies_count"] = len(comment_replies[comment['id']])
-        d["replies"] = comment_replies[comment['id']]
+        try:
+            d["reactions"] = comment_reaction[comment['id']]
+            d["replies_count"] = len(comment_replies[comment['id']])
+            d["replies"] = comment_replies[comment['id']]
+        except:
+            d['reaction'] = {"count": 0, "type": []}
+            d['replies_count'] = 0
+            d['replies'] = []
         comments.append(d)
 
     result = {"post_id": post_id, "posted_by": posted_by, "posted_at": posted_at, "post_content": post_content,
@@ -144,13 +149,16 @@ def react_to_post(user_id, post_id, reaction_type):
         react = PostReaction.objects.get(user_id=user_id, post_id=post_id)
         if react.reaction == reaction_type:
             react.delete()
+            return react.id
         else:
             reaction_type = reaction_type
             react.reaction = reaction_type
             react.save()
+            return react.id
     except:
         react = PostReaction(user_id=user_id, post_id=post_id, reaction=reaction_type)
         react.save()
+        return react.id
 
 
 def react_to_comment(user_id, comment_id, reaction_type):
@@ -158,13 +166,16 @@ def react_to_comment(user_id, comment_id, reaction_type):
         react = CommentReaction.objects.get(user_id=user_id, comment_id=comment_id)
         if react.reaction == reaction_type:
             react.delete()
+            return react.id
         else:
             reaction_type = reaction_type
             react.reaction = reaction_type
             react.save()
+            return react.id
     except:
         react = CommentReaction(user_id=user_id, comment_id=comment_id, reaction=reaction_type)
         react.save()
+        return react.id
 
 
 def get_user_posts(user_id):
@@ -177,12 +188,12 @@ def get_posts_with_more_positive_reactions():
     positive_posts = PostReaction.objects.values('post').annotate(
         positive_count=Count('reaction', filter=Q(reaction__in=("LIKE", "LOVE", "WOW", "HAHA"))),
         negative_count=Count('reaction', filter=Q(reaction__in=("SAD", "ANGRY")))).filter(
-        positive_count__gt=F('negative_count')).values('post_id')
+        positive_count__gt=F('negative_count')).values_list('post_id', flat=True)
     return list(positive_posts)
 
 
 def get_posts_reacted_by_user(user_id):
-    likes = PostReaction.objects.prefetch_related('post_set').filter(user_id=user_id)
+    likes = PostReaction.objects.filter(user_id=user_id)
     posts_list = [get_post(like.post.id) for like in likes]
     return posts_list
 
@@ -219,4 +230,7 @@ def get_replies_for_comment(comment_id):
 
 
 def delete_post(post_id):
-    Post.objects.get(id=post_id).delete()
+    try:
+        Post.objects.get(id=post_id).delete()
+    except:
+        raise Post.DoesNotExist

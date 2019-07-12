@@ -8,11 +8,11 @@ from posts.permissions import IsOwnerOrReadOnly
 from rest_framework.authentication import BasicAuthentication, SessionAuthentication
 from rest_framework.permissions import IsAuthenticated
 from django.db.models import Q, F, Count
+from oauth2_provider.contrib.rest_framework import TokenHasReadWriteScope, TokenHasScope, OAuth2Authentication, IsAuthenticatedOrTokenHasScope, TokenHasResourceScope
 
 
 class CreatePost(APIView):
-    authentication_classes = (BasicAuthentication, SessionAuthentication)
-    permission_classes = (IsAuthenticated, )
+    permission_classes = (TokenHasReadWriteScope, )
 
     def post(self, request):
         serializer = PostSerializer(data=request.data)
@@ -23,8 +23,7 @@ class CreatePost(APIView):
 
 
 class CreateUser(APIView):
-    authentication_classes = (BasicAuthentication, SessionAuthentication)
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (TokenHasReadWriteScope, )
 
     def post(self, request):
         serializer = UserSerializer(data=request.data)
@@ -36,18 +35,17 @@ class CreateUser(APIView):
 
 
 class PostList(APIView):
-    authentication_classes = (BasicAuthentication, SessionAuthentication)
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticatedOrTokenHasScope, )
+    required_scopes = ['read']
 
-    def get(self, request):
+    def get(self, request, format=None):
         posts = Post.objects.all()
         serializer = PostSerializer(posts, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 class CreateComment(APIView):
-    authentication_classes = (BasicAuthentication, SessionAuthentication)
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (TokenHasReadWriteScope, )
 
     def get(self, request, pk):
         post = Post.objects.get(pk=pk)
@@ -64,8 +62,7 @@ class CreateComment(APIView):
 
 
 class ReplyToComment(APIView):
-    authentication_classes = (BasicAuthentication, SessionAuthentication)
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (TokenHasReadWriteScope, )
 
     def post(self, request):
         serializer = PostCommentSerializer(data=request.data)
@@ -85,8 +82,7 @@ class ReplyToComment(APIView):
 
 
 class PostReact(APIView):
-    authentication_classes = (BasicAuthentication, SessionAuthentication)
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (TokenHasReadWriteScope, )
 
     def get(self, request, pk):
         post = Post.objects.get(pk=pk)
@@ -112,8 +108,7 @@ class PostReact(APIView):
 
 
 class CommentReact(APIView):
-    authentication_classes = (BasicAuthentication, SessionAuthentication)
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (TokenHasReadWriteScope, )
 
     def get(self, request, pk):
         comment = Comment.objects.get(pk=pk)
@@ -139,8 +134,7 @@ class CommentReact(APIView):
 
 
 class GetUserPost(APIView):
-    authentication_classes = (BasicAuthentication, SessionAuthentication)
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (TokenHasReadWriteScope, )
 
     def get(self, request):
         posts = Post.objects.filter(user=request.user)
@@ -149,8 +143,7 @@ class GetUserPost(APIView):
 
 
 class GetPositivePosts(APIView):
-    authentication_classes = (BasicAuthentication, SessionAuthentication)
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (TokenHasReadWriteScope, )
 
     def get(self, request):
         positive_posts = PostReaction.objects.values('post').annotate(
@@ -162,8 +155,7 @@ class GetPositivePosts(APIView):
 
 
 class GetPostsReactedByUser(APIView):
-    authentication_classes = (BasicAuthentication, SessionAuthentication)
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (TokenHasReadWriteScope, )
 
     def get(self, request):
         posts = PostReaction.objects.filter(user=request.user).values('post_id')
@@ -173,8 +165,7 @@ class GetPostsReactedByUser(APIView):
 
 
 class GetReactionToPost(APIView):
-    authentication_classes = (BasicAuthentication, SessionAuthentication)
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (TokenHasReadWriteScope, )
 
     def get(self, request, pk):
         type = PostReaction.objects.filter(post_id=pk).values('reaction')
@@ -185,8 +176,7 @@ class GetReactionToPost(APIView):
 
 
 class GetReactionMetrics(APIView):
-    authentication_classes = (BasicAuthentication, SessionAuthentication)
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (TokenHasReadWriteScope, )
 
     def get(self, request, pk):
         likes = PostReaction.objects.filter(post_id=pk).values('reaction').annotate(react_count=Count('reaction'))
@@ -197,8 +187,7 @@ class GetReactionMetrics(APIView):
 
 
 class GetTotalReactionCount(APIView):
-    authentication_classes = (BasicAuthentication, SessionAuthentication)
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (TokenHasReadWriteScope, )
 
     def get(self, request):
         type = PostReaction.objects.values_list('reaction', flat=True)
@@ -208,8 +197,7 @@ class GetTotalReactionCount(APIView):
 
 
 class GetRepliesToComment(APIView):
-    authentication_classes = (BasicAuthentication, SessionAuthentication)
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (TokenHasReadWriteScope, )
 
     def post(self, request):
         serializer = IdSerializer(data=request.data)
@@ -224,8 +212,8 @@ class GetRepliesToComment(APIView):
 
 
 class DeletePost(APIView):
-    authentication_classes = (BasicAuthentication, SessionAuthentication)
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (TokenHasScope, )
+    required_scopes = ['write']
 
     def post(self, request):
         serializer = IdSerializer(data=request.data)
@@ -239,8 +227,7 @@ class DeletePost(APIView):
 
 
 class GetPost(APIView):
-    authentication_classes = (BasicAuthentication, SessionAuthentication)
-    permission_classes = (permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly)
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly, TokenHasReadWriteScope)
 
     @staticmethod
     def get_comment_data(comment):

@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from posts import views
 from rest_framework.urlpatterns import format_suffix_patterns
 
@@ -18,7 +18,8 @@ urlpatterns = [
     path('reaction-count/', views.GetTotalReactionCount.as_view()),
     path('replies/', views.GetRepliesToComment.as_view()),
     path('delete-post/', views.DeletePost.as_view()),
-    path('reply-comment/', views.ReplyToComment.as_view())
+    path('reply-comment/', views.ReplyToComment.as_view()),
+    path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
