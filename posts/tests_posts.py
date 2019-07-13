@@ -376,7 +376,7 @@ class TestReactionCount:
         PostReaction.objects.create(user_id=second_user_id, post_id=second_post_id, reaction="SAD")
 
     def test_total_reaction_count(self, setup_post_reaction_data):
-        assert get_total_reaction_count() == 4
+        assert get_total_reaction_count() == PostReaction.objects.count()
 
 
 @pytest.mark.django_db
@@ -472,12 +472,19 @@ class TestGetPost:
     def test_comment_data(self, setup_data):
         user_id, second_user, post, first_comment, second_comment, first_reply, second_reply, first_reaction, second_reaction, first_comment_reaction, second_comment_reaction = setup_data
         user = User.objects.get(id=user_id)
-        post_data = get_post(post.id)
+        post_data = get_post(post_id=post.id)
         assert post_data["comments"][0]["comment_id"] == first_comment.id
-        assert post_data["comments"][0]["commenter"] == {"user_id": user.id, "name": user.username, "profile_pic_url": user.profile_pic}
+        assert post_data["comments"][0]["commenter"] == {"user_id": user.id, "name": user.username, "profile_pic": user.profile_pic}
         assert post_data["comments"][0]["commented_at"] == first_comment.comment_create_date.strftime("%Y-%m-%d %H:%M:%S")
         assert post_data["comments"][0]["comment_content"] == first_comment.message
+        assert post_data["comments"][0]["reactions"] == {"count": 1, "type": ["LIKE"]}
+        assert post_data["comments"][0]["replies_count"] == 1
 
-
-if __name__ == '__main__':
-    unittest.main()
+    def test_reply_data(self, setup_data):
+        user_id, second_user, post, first_comment, second_comment, first_reply, second_reply, first_reaction, second_reaction, first_comment_reaction, second_comment_reaction = setup_data
+        post_data = get_post(post_id=post.id)
+        assert post_data["comments"][0]["replies"][0]["comment_id"] == first_reply.id
+        assert post_data["comments"][0]["replies"][0]["commenter"] == {"user_id": second_user.id, "name": second_user.username, "profile_pic": second_user.profile_pic}
+        assert post_data["comments"][0]["replies"][0]["commented_at"] == first_reply.comment_create_date.strftime("%Y-%m-%d %H:%M:%S")
+        assert post_data["comments"][0]["replies"][0]["comment_content"] == first_reply.message
+        assert post_data["comments"][0]["replies"][0]["reactions"] == {"count": 1, "type": ["LIKE"]}
