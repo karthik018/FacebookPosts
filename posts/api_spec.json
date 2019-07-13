@@ -77,17 +77,6 @@
         "post_create_date"
       ]
     },
-    "Posts": {
-      "type": "object",
-      "properties": {
-        "posts": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Post"
-          }
-        }
-      }
-    },
     "Comment": {
       "type": "object",
       "properties": {
@@ -107,10 +96,31 @@
     "CommentWithUser": {
       "allOf": [
         {
-          "$ref": "#/definitions/User"
+          "type": "object",
+          "properties": {
+            "comment_id": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "commenter": {
+              "$ref": "#/definitions/User"
+            }
+          }
         },
         {
           "$ref": "#/definitions/Comment"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "reactions": {
+              "$ref": "#/definitions/Reactions"
+            }
+          }
         }
       ]
     },
@@ -122,34 +132,32 @@
           "items": {
             "$ref": "#/definitions/CommentWithUser"
           }
-        },
-        "reactions": {
-          "$ref": "#/definitions/Reactions"
         }
       }
     },
     "CommentWithReplies": {
-      "type": "object",
-      "properties": {
-        "comment": {
+      "allOf": [
+        {
           "$ref": "#/definitions/CommentWithUser"
         },
-        "replies": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/CommentWithUser"
+        {
+          "type": "object",
+          "properties": {
+            "replies": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CommentWithUser"
+              }
+            }
           }
         }
-      }
+      ]
     },
     "CommentsWithReplies": {
       "type": "object",
       "properties": {
-        "comments": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/CommentWithReplies"
-          }
+        "comment": {
+          "$ref": "#/definitions/CommentWithReplies"
         }
       }
     },
@@ -184,13 +192,18 @@
         {
           "type": "object",
           "properties": {
-            "PostId": {
+            "postid": {
               "type": "string"
             }
           }
         },
         {
-          "$ref": "#/definitions/User"
+          "type": "object",
+          "properties": {
+            "posted_by": {
+              "$ref": "#/definitions/User"
+            }
+          }
         },
         {
           "$ref": "#/definitions/Post"
@@ -207,6 +220,17 @@
           "$ref": "#/definitions/CommentsWithReplies"
         }
       ]
+    },
+    "Posts": {
+      "type": "object",
+      "properties": {
+        "posts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PostData"
+          }
+        }
+      }
     }
   },
 
@@ -237,7 +261,7 @@
       "type": "string"
     },
     "PostParameter": {
-      "name": "postId",
+      "name": "postid",
       "in": "path",
       "required": true,
       "description": "Give postid",
@@ -253,7 +277,7 @@
       }
     },
     "CommentParameter": {
-      "name": "commentId",
+      "name": "commentid",
       "in": "path",
       "required": true,
       "description": "Provide commentid",
@@ -339,8 +363,14 @@
         "$ref": "#/definitions/Comments"
       }
     },
+    "CommentReactionUpdateResponse": {
+      "description": "Reaction Updated"
+    },
     "UpdateOrDeleteUserResponse": {
       "description": "Accepted"
+    },
+    "DeletePostResponse": {
+      "description": "Post deleted"
     }
   },
   "paths": {
@@ -391,7 +421,7 @@
         }
       }
     },
-    "/posts/{postId}/": {
+    "/posts/{postid}/": {
       "get": {
         "summary": "Get post object with given postid",
         "operationId": "get_post",
@@ -403,6 +433,20 @@
         "responses": {
           "200": {
             "$ref": "#/responses/PostResponse"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete post with given postid",
+        "operationId": "delete_post",
+        "parameters": [
+          {
+            "$ref": "#/parameters/PostParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/DeletePostResponse"
           }
         }
       }
@@ -423,7 +467,7 @@
         }
       }
     },
-    "/post/{postId}/comment/": {
+    "/post/{postid}/comment/": {
       "post": {
         "security": [
           {
@@ -449,7 +493,7 @@
         }
       }
     },
-    "/post/{postId}/comments/": {
+    "/post/{postid}/comments/": {
       "get": {
         "summary": "Get all the comments of a post",
         "operationId": "get_comments_of_post",
@@ -465,7 +509,7 @@
         }
       }
     },
-    "/post/{postId}/reaction/": {
+    "/post/{postid}/reaction/": {
       "post": {
         "security": [
           {
@@ -491,7 +535,7 @@
         }
       }
     },
-    "/post/{postId}/comment/{commentId}/reaction/": {
+    "/post/{postid}/comment/{commentid}/reaction/": {
       "post": {
         "security": [
           {
@@ -518,12 +562,32 @@
             "$ref": "#/responses/CommentReactionResponse"
           }
         }
+      },
+      "put": {
+        "summary": "Update reaction to a comment",
+        "operationId": "update_reaction_on_comment",
+        "parameters": [
+          {
+            "$ref": "#/parameters/PostParameter"
+          },
+          {
+            "$ref": "#/parameters/CommentParameter"
+          },
+          {
+            "$ref": "#/parameters/CommentReactionParameter"
+          }
+        ],
+        "responses": {
+          "201": {
+            "$ref": "#/responses/CommentReactionResponse"
+          }
+        }
       }
     },
-    "/post/{postId}/comment/{commentId}/replies/": {
+    "/post/{postid}/comment/{commentid}/replies/": {
       "get": {
-        "summary": "",
-        "operationId": "",
+        "summary": "Get all replies for a comment",
+        "operationId": "comment_replies",
         "parameters": [
           {
             "$ref": "#/parameters/PostParameter"
