@@ -47,19 +47,16 @@
         "password"
       ]
     },
-    "Users": {
+    "UserData": {
       "type": "object",
       "properties": {
-        "users": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/User"
-          }
+        "userid": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
         }
-      },
-      "required": [
-        "users"
-      ]
+      }
     },
     "Post": {
       "type": "object",
@@ -107,7 +104,7 @@
           "type": "object",
           "properties": {
             "commenter": {
-              "$ref": "#/definitions/User"
+              "$ref": "#/definitions/UserData"
             }
           }
         },
@@ -157,7 +154,10 @@
       "type": "object",
       "properties": {
         "comment": {
-          "$ref": "#/definitions/CommentWithReplies"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CommentWithReplies"
+          }
         }
       }
     },
@@ -171,6 +171,20 @@
           ]
         }
       }
+    },
+    "ReactionWithExtraField": {
+      "allOf": [
+        {
+          "properties": {
+            "count": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "$ref": "#/definitions/Reaction"
+        }
+      ]
     },
     "Reactions": {
       "type": "object",
@@ -201,7 +215,7 @@
           "type": "object",
           "properties": {
             "posted_by": {
-              "$ref": "#/definitions/User"
+              "$ref": "#/definitions/UserData"
             }
           }
         },
@@ -229,6 +243,14 @@
           "items": {
             "$ref": "#/definitions/PostData"
           }
+        }
+      }
+    },
+    "PostsWithExtraFields": {
+      "type": "object",
+      "properties": {
+        "postid": {
+          "type": "string"
         }
       }
     }
@@ -276,6 +298,15 @@
         "$ref": "#/definitions/Comment"
       }
     },
+    "ReplyCreateParameter": {
+      "name": "comment",
+      "in": "body",
+      "required": true,
+      "description": "Create reply to comment",
+      "schema": {
+        "$ref": "#/definitions/Comment"
+      }
+    },
     "CommentParameter": {
       "name": "commentid",
       "in": "path",
@@ -296,39 +327,29 @@
       "schema": {
         "$ref": "#/definitions/Reaction"
       }
-    },
-    "UpdateUserParameter": {
-      "name": "Update User",
-      "in": "body",
-      "description": "Update person",
-      "schema": {
-        "properties": {
-          "firstname": {
-            "type": "string"
-          },
-          "lastname": {
-            "type": "string"
-          },
-          "age": {
-            "type": "integer",
-            "format": "int64"
-          }
-        },
-        "required": [
-          "firstname",
-          "lastname",
-          "age"
-        ]
-      }
     }
   },
 
   "responses": {
     "CreateNewPersonResponse": {
-      "description": "Success Response"
+      "description": "Success Response",
+      "schema": {
+        "properties": {
+          "userid": {
+            "type": "string"
+          }
+        }
+      }
     },
     "CreateNewPostResponse": {
-      "description": "Success"
+      "description": "Success",
+      "schema": {
+        "properties": {
+          "postid": {
+            "type": "string"
+          }
+        }
+      }
     },
     "PostResponse": {
       "description": "Post",
@@ -343,7 +364,14 @@
       }
     },
     "CreateCommentResponse": {
-      "description": "Success"
+      "description": "Success",
+      "schema": {
+        "properties": {
+          "commentid": {
+            "type": "string"
+          }
+        }
+      }
     },
     "PostCommentsResponse": {
       "description": "Success",
@@ -352,10 +380,24 @@
       }
     },
     "PostReactionResponse": {
-      "description": "Success"
+      "description": "Success",
+      "schema": {
+        "properties": {
+          "reactionid": {
+            "type": "string"
+          }
+        }
+      }
     },
     "CommentReactionResponse": {
-      "description": "Success"
+      "description": "Success",
+      "schema": {
+        "properties": {
+          "reactionid": {
+            "type": "string"
+          }
+        }
+      }
     },
     "CommentReplyResponse": {
       "description": "Success",
@@ -363,18 +405,61 @@
         "$ref": "#/definitions/Comments"
       }
     },
-    "CommentReactionUpdateResponse": {
-      "description": "Reaction Updated"
+    "ReplyResponse": {
+      "description": "Reply created",
+      "schema": {
+        "properties": {
+          "replyid": {
+            "type": "string"
+          }
+        }
+      }
     },
-    "UpdateOrDeleteUserResponse": {
-      "description": "Accepted"
+    "PositivePostsResponse": {
+      "description": "Posts with more positive reactions",
+      "schema": {
+        "properties": {
+          "posts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/PostsWithExtraFields"
+            }
+          }
+        }
+      }
+    },
+    "PostReactionsResponse": {
+      "description": "Success",
+      "schema": {
+        "properties": {
+          "reactions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/Reaction"
+            }
+          }
+        }
+      }
+    },
+    "ReactionMetricResponse": {
+      "description": "Success",
+      "schema": {
+        "properties": {
+          "reactions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/ReactionWithExtraField"
+            }
+          }
+        }
+      }
     },
     "DeletePostResponse": {
       "description": "Post deleted"
     }
   },
   "paths": {
-    "/user/create": {
+    "/user/create/": {
       "post": {
         "security": [
           {
@@ -398,7 +483,8 @@
         }
       }
     },
-    "/post/create": {
+
+    "/post/create/": {
       "post": {
         "security": [
           {
@@ -533,6 +619,23 @@
             "$ref": "#/responses/PostReactionResponse"
           }
         }
+      },
+      "put": {
+        "summary": "Update Reaction to post",
+        "operationId": "update_reaction",
+        "parameters": [
+          {
+            "$ref": "#/parameters/PostParameter"
+          },
+          {
+            "$ref": "#/parameters/PostReactionParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/PostReactionResponse"
+          }
+        }
       }
     },
     "/post/{postid}/comment/{commentid}/reaction/": {
@@ -584,6 +687,35 @@
         }
       }
     },
+    "/post/{postid}/comment/{commentid}/reply": {
+      "post": {
+        "summary": "Reply to a comment",
+        "operationId": "reply_to_comment",
+        "security": [
+          {
+            "oauth": [
+              "superuser"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/PostParameter"
+          },
+          {
+            "$ref": "#/parameters/CommentParameter"
+          },
+          {
+            "$ref": "#/parameters/ReplyCreateParameter"
+          }
+        ],
+        "responses": {
+          "201": {
+            "$ref": "#/responses/ReplyResponse"
+          }
+        }
+      }
+    },
     "/post/{postid}/comment/{commentid}/replies/": {
       "get": {
         "summary": "Get all replies for a comment",
@@ -599,6 +731,89 @@
         "responses": {
           "200": {
             "$ref": "#/responses/CommentReplyResponse"
+          }
+        }
+      }
+    },
+    "/post/positive/reactions/": {
+      "get": {
+        "summary": "Get posts with more positive reactions",
+        "operationId": "posts_with_positive_reactions",
+        "parameters": [
+
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/PositivePostsResponse"
+          }
+        }
+      }
+    },
+    "/user/{username}/reacted/posts/": {
+      "get": {
+        "summary": "Get all the posts reacted by the user",
+        "operationId": "posts_reacted_by_user",
+        "parameters": [
+          {
+            "$ref": "#/parameters/UsernameParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/UserPostsResponse"
+          }
+        }
+      }
+    },
+    "/post/{postid}/reactions/": {
+      "get": {
+        "summary": "Get all the reactions to a post",
+        "operationId": "reactions_to_post",
+        "parameters": [
+          {
+            "$ref": "#/parameters/PostParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/PostReactionsResponse"
+          }
+        }
+      }
+    },
+    "/total/reaction/count/": {
+      "get": {
+        "summary": "Get total reaction count",
+        "operationId": "total_reaction_count",
+        "parameters": [
+
+        ],
+        "responses": {
+          "200": {
+            "description": "total reaction count",
+            "schema": {
+              "properties": {
+                "total_count": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/post/{postid}/reaction/metrics/": {
+      "get": {
+        "summary": "Get post reaction metrics",
+        "operationId": "reaction_metrics",
+        "parameters": [
+          {
+            "$ref": "#/parameters/PostParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/ReactionMetricResponse"
           }
         }
       }
